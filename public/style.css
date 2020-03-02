@@ -1,0 +1,158 @@
+/* 
+    CASCADING STYLESHEET 
+*/
+
+/* 
+    ALINHAMENTOS, ESPAÇAMENTOS 
+LARGURAS E ALTURAS */
+* {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+}
+
+/* 
+*/
+/* Estrutura */
+header, main, footer {
+    text-align: center;
+}
+
+section.donors {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+section.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+header, .form, main {
+    margin: 0 auto 70px auto;
+
+    width: 90%;
+    max-width: 500px;
+}
+
+header button {
+    margin: 16px 0px 0px 0px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: #ff1b44;
+    color: white;
+    border: none;
+    font-weight: bold;
+}
+
+/* Titulos */
+header h1, main h2 {
+    margin-bottom: 70px;
+}
+header h1 {
+    font-size: 60px;
+    margin: 60px 0;
+}
+div.drop {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    background-color: #ff1b45f6;
+    height: 40px;
+    width: 40px;
+    border-radius: 0% 50% 50% 50%;
+    transform: rotate(45deg);
+    box-shadow: inset -25px 10px 0px -10px #ff1b44;
+}
+header p {
+    font-size: 14px;
+}
+main h2 span {
+    color: #ff1b44;
+}
+h1, h2 {
+    color: #000000cc;
+}
+.form h2 {
+    text-align: right;
+    color: #ffffffee;
+    font-size: 18px;
+}
+
+/* Form */
+section.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 45px;
+    align-items: center;
+    background-color: #ff1b44;
+    padding: 16px 64px;
+    border-radius: 6px;
+    transition: all 300ms;
+}
+
+form input,
+form button,
+form select {
+    width: 100%;
+    margin: 0 0 4px 0;
+    
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 1px #ffffff88 solid;
+}
+form input, select {
+    background-color: transparent;
+}
+form input::placeholder {
+    color: #ffffffaa;
+}
+
+/* Main */
+main .donors {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.blood {
+    color: #ff1b44;
+    font-weight: bold;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.blood::before {
+    content: "";
+    background-color: #ff1b4411;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+
+    border-radius: 50% 0 50% 50%;
+    transform: rotate(-45deg);
+}
+.donor p {
+    margin: 24px 0px 64px 0px;
+    font-size: 14px;
+}
+
+footer {
+    margin-top: auto;
+    padding: 16px;
+    border-top: 1px solid #eee;
+}
+
+/* Funcionalidades com JavaScript */
+section.form.hide {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    margin-top: -70px;
+} 
